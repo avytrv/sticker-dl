@@ -31,7 +31,7 @@ export function DownloadForm() {
     return (
         <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col w-full items-center space-y-6">
-                <div className="flex space-x-16">
+                <div className="flex w-full max-w-lg justify-around">
                     <FormField
                         control={form.control}
                         name="targetDevice"
