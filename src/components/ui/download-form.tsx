@@ -28,6 +28,8 @@ export function DownloadForm() {
         console.log(values);
     }
 
+    const targetDevice = form.watch("targetDevice");
+
     return (
         <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col w-full items-center space-y-6">
@@ -38,7 +40,7 @@ export function DownloadForm() {
                         render={({ field }) => (
                             <FormItem className="space-y-3">
                                 <FormLabel>Target device</FormLabel>
-                                <FormControl >
+                                <FormControl>
                                     <RadioGroup
                                         onValueChange={field.onChange}
                                         defaultValue={field.value}
@@ -66,14 +68,16 @@ export function DownloadForm() {
                             </FormItem>
                         )}
                     />
+
                     <FormField 
                         control={form.control}
                         name="size"
                         render={({ field }) => (
                             <FormItem className="space-y-3">
                                 <FormLabel>Size</FormLabel>
-                                <FormControl >
+                                <FormControl>
                                     <RadioGroup
+                                        disabled={targetDevice === "android"}
                                         onValueChange={field.onChange}
                                         defaultValue={field.value}
                                         className="flex flex-col space-y-1"

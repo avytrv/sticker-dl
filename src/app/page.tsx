@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div>
       <main className="flex min-h-screen flex-col items-center justify-center space-y-4 p-4">
-        <h1 className="text-3xl text-center text-green-500 font-bold">
+        <h1 className="text-2xl text-center text-green-500 font-bold">
           LINE Sticker Downloader
         </h1>
         <p className="text-lg text-center">
