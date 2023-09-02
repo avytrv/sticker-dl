@@ -49,7 +49,7 @@ export function DownloadForm() {
             name="targetDevice"
             render={({ field }) => (
               <FormItem className="space-y-3">
-                <FormLabel>Target device</FormLabel>
+                <FormLabel className="text-xl">Target device</FormLabel>
                 <FormControl>
                   <RadioGroup
                     onValueChange={field.onChange}
@@ -60,14 +60,18 @@ export function DownloadForm() {
                       <FormControl>
                         <RadioGroupItem value="iphone" />
                       </FormControl>
-                      <FormLabel className="font-normal">iPhone</FormLabel>
+                      <FormLabel className="font-normal text-xl">
+                        iPhone
+                      </FormLabel>
                     </FormItem>
-                    
+
                     <FormItem className="flex items-center space-x-2 space-y-0">
                       <FormControl>
                         <RadioGroupItem value="android" />
                       </FormControl>
-                      <FormLabel className="font-normal">Android</FormLabel>
+                      <FormLabel className="font-normal text-xl">
+                        Android
+                      </FormLabel>
                     </FormItem>
                   </RadioGroup>
                 </FormControl>
@@ -81,7 +85,7 @@ export function DownloadForm() {
             name="size"
             render={({ field }) => (
               <FormItem className="space-y-3">
-                <FormLabel>Size</FormLabel>
+                <FormLabel className="text-xl">Size</FormLabel>
                 <FormControl>
                   <RadioGroup
                     disabled={targetDevice === "android"}
@@ -93,14 +97,14 @@ export function DownloadForm() {
                       <FormControl>
                         <RadioGroupItem value="1x" />
                       </FormControl>
-                      <FormLabel className="font-normal">1x</FormLabel>
+                      <FormLabel className="font-normal text-xl">1x</FormLabel>
                     </FormItem>
 
                     <FormItem className="flex items-center space-x-2 space-y-0">
                       <FormControl>
                         <RadioGroupItem value="2x" />
                       </FormControl>
-                      <FormLabel className="font-normal">2x</FormLabel>
+                      <FormLabel className="font-normal text-xl">2x</FormLabel>
                     </FormItem>
                   </RadioGroup>
                 </FormControl>
@@ -117,13 +121,19 @@ export function DownloadForm() {
             render={({ field }) => (
               <FormItem className="w-full">
                 <FormControl>
-                  <Input placeholder="Sticker URL" {...field} />
+                  <Input
+                    placeholder="Sticker URL"
+                    className="text-lg"
+                    {...field}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
-          <Button type="submit">Download</Button>
+          <Button type="submit" className="text-lg">
+            Download
+          </Button>
         </div>
       </form>
     </Form>

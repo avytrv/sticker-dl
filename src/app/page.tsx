@@ -2,12 +2,13 @@ import { DownloadForm } from "@/components/ui/download-form";
 
 export default function Home() {
   return (
-    <div>
-      <main className="flex min-h-screen flex-col items-center justify-center space-y-4 p-4">
-        <h1 className="text-2xl text-center text-green-500 font-bold">
-          LINE Sticker Downloader
-        </h1>
-        <p className="text-lg text-center">
+    <main className="flex min-h-screen flex-col items-center justify-between space-y-4 px-6 pb-10 pt-20 text-2xl">
+      <h1 className="text-6xl text-center text-green-500 font-bold mb-4">
+        LINE Sticker Downloader
+      </h1>
+
+      <div className="flex flex-col items-center space-y-8">
+        <p className="text-center">
           Go to the{" "}
           <a
             href="https://store.line.me/"
@@ -23,13 +24,14 @@ export default function Home() {
           only one default size.
         </p>
         <DownloadForm />
-        <footer>
-          <p>
-            Made with 💚 by{" "}
-            <span className="text-green-500 font-semibold">tnt_kitty</span>
-          </p>
-        </footer>
-      </main>
-    </div>
+      </div>
+
+      <footer>
+        <p>
+          Made with 💚 by{" "}
+          <span className="text-green-500 font-semibold">tnt_kitty</span>
+        </p>
+      </footer>
+    </main>
   );
 }
