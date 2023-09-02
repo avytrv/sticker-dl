@@ -41,7 +41,7 @@ export function DownloadForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="flex flex-col w-full items-center space-y-6"
+        className="flex w-full flex-col items-center space-y-6"
       >
         <div className="flex w-full max-w-lg justify-around">
           <FormField
@@ -60,7 +60,7 @@ export function DownloadForm() {
                       <FormControl>
                         <RadioGroupItem value="iphone" />
                       </FormControl>
-                      <FormLabel className="font-normal text-xl">
+                      <FormLabel className="text-xl font-normal">
                         iPhone
                       </FormLabel>
                     </FormItem>
@@ -69,7 +69,7 @@ export function DownloadForm() {
                       <FormControl>
                         <RadioGroupItem value="android" />
                       </FormControl>
-                      <FormLabel className="font-normal text-xl">
+                      <FormLabel className="text-xl font-normal">
                         Android
                       </FormLabel>
                     </FormItem>
@@ -97,14 +97,14 @@ export function DownloadForm() {
                       <FormControl>
                         <RadioGroupItem value="1x" />
                       </FormControl>
-                      <FormLabel className="font-normal text-xl">1x</FormLabel>
+                      <FormLabel className="text-xl font-normal">1x</FormLabel>
                     </FormItem>
 
                     <FormItem className="flex items-center space-x-2 space-y-0">
                       <FormControl>
                         <RadioGroupItem value="2x" />
                       </FormControl>
-                      <FormLabel className="font-normal text-xl">2x</FormLabel>
+                      <FormLabel className="text-xl font-normal">2x</FormLabel>
                     </FormItem>
                   </RadioGroup>
                 </FormControl>
